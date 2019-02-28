@@ -4,7 +4,7 @@
   hosts: localhost
   gather_facts: no
   tasks:
-    - file
+    - file:
         path: configs/
         state: directory
 - name: Generate IOS-XE Router Configurations
