@@ -1,0 +1,13 @@
+[sea]
+ignw-csr
+acme-sea-asa1
+acme-sea-nxos1
+
+[cisco-ios-xe-routers]
+ignw-csr
+
+[cisco-asa]
+acme-sea-asa1
+
+[cisco-nxos]
+acme-sea-nxos1

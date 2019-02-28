@@ -32,3 +32,4 @@ cli alias name wr copy run start
 line console
 line vty
 boot nxos bootflash:/nxos.7.0.3.I7.3.bin
+end

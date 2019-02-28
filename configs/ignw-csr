@@ -2,7 +2,7 @@ service timestamps debug datetime msec
 service timestamps log datetime localtime show-timezone
 service password-encryption
 !
-hostname acme-sea-rtr1
+hostname ignw-csr
 !
 logging buffered 8192
 !
@@ -37,5 +37,9 @@ line vty 0 4
 login local
 !
 ntp master 5
-ntp server 66.228.42.59 prefer ntp server 45.76.244.193ntp server 204.9.54.119ntp server 173.255.206.154!
+ntp server 66.228.42.59 prefer
+ntp server 45.76.244.193
+ntp server 204.9.54.119
+ntp server 173.255.206.154
+!
 end

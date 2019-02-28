@@ -1,0 +1,192 @@
+2019-02-27 23:45:25,803 p=22270 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-27 23:45:26,232 p=22270 u=ignw |  PLAY [Deploy Cisco IOS-XE Router Configurations] ****************************************************************************************************************
+2019-02-27 23:45:26,255 p=22270 u=ignw |  TASK [napalm_install_config] ************************************************************************************************************************************
+2019-02-27 23:47:58,010 p=22270 u=ignw |  fatal: [acme-sea-rtr1]: FAILED! => {"changed": false, "msg": "cannot install config: Search pattern never detected in send_command_expect: acme\\-sea\\-rtr1\\#"}
+2019-02-27 23:47:58,012 p=22270 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/deploy_configurations.retry
+
+2019-02-27 23:47:58,013 p=22270 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
+2019-02-27 23:47:58,013 p=22270 u=ignw |  acme-sea-rtr1              : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 00:00:11,994 p=22358 u=ignw |  ERROR! the playbook: deploy_configurations. could not be found
+2019-02-28 00:00:15,681 p=22365 u=ignw |  PLAY [Deploy Cisco IOS-XE Router Configurations] ****************************************************************************************************************
+2019-02-28 00:00:15,709 p=22365 u=ignw |  TASK [napalm_install_config] ************************************************************************************************************************************
+2019-02-28 00:02:47,683 p=22365 u=ignw |  fatal: [acme-sea-rtr1]: FAILED! => {"changed": false, "msg": "cannot install config: Search pattern never detected in send_command_expect: acme\\-sea\\-rtr1\\#"}
+2019-02-28 00:02:47,685 p=22365 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/deploy_configurations.retry
+
+2019-02-28 00:02:47,685 p=22365 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
+2019-02-28 00:02:47,686 p=22365 u=ignw |  acme-sea-rtr1              : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 00:10:21,570 p=22604 u=ignw |  ERROR! the playbook: deploy_configurations. could not be found
+2019-02-28 00:10:25,180 p=22613 u=ignw |  PLAY [Deploy Cisco IOS-XE Router Configurations] ****************************************************************************************************************
+2019-02-28 00:10:25,206 p=22613 u=ignw |  TASK [napalm_install_config] ************************************************************************************************************************************
+2019-02-28 00:12:58,744 p=22613 u=ignw |  fatal: [acme-sea-rtr1]: FAILED! => {"changed": false, "msg": "cannot install config: Search pattern never detected in send_command_expect: acme\\-sea\\-rtr1\\#"}
+2019-02-28 00:12:58,747 p=22613 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/deploy_configurations.retry
+
+2019-02-28 00:12:58,747 p=22613 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
+2019-02-28 00:12:58,748 p=22613 u=ignw |  acme-sea-rtr1              : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 00:18:00,186 p=22753 u=ignw |  ERROR! the playbook: deploy_configurations. could not be found
+2019-02-28 00:18:05,914 p=22760 u=ignw |  PLAY [Deploy Cisco IOS-XE Router Configurations] ****************************************************************************************************************
+2019-02-28 00:18:05,942 p=22760 u=ignw |  TASK [napalm_install_config] ************************************************************************************************************************************
+2019-02-28 00:20:37,336 p=22760 u=ignw |  fatal: [acme-sea-rtr1]: FAILED! => {"changed": false, "msg": "cannot install config: Search pattern never detected in send_command_expect: acme\\-sea\\-rtr1\\#"}
+2019-02-28 00:20:37,338 p=22760 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/deploy_configurations.retry
+
+2019-02-28 00:20:37,338 p=22760 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
+2019-02-28 00:20:37,339 p=22760 u=ignw |  acme-sea-rtr1              : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 00:26:35,256 p=22896 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 00:26:35,257 p=22896 u=ignw |  ERROR! the playbook: deploy_configurations. could not be found
+2019-02-28 00:26:37,718 p=22903 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 00:26:38,137 p=22903 u=ignw |  PLAY [Deploy Cisco IOS-XE Router Configurations] ****************************************************************************************************************
+2019-02-28 00:26:38,166 p=22903 u=ignw |  TASK [napalm_install_config] ************************************************************************************************************************************
+2019-02-28 00:29:10,068 p=22903 u=ignw |  fatal: [ignw-csr]: FAILED! => {"changed": false, "msg": "cannot install config: Search pattern never detected in send_command_expect: acme\\-sea\\-rtr1\\#"}
+2019-02-28 00:29:10,070 p=22903 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/deploy_configurations.retry
+
+2019-02-28 00:29:10,070 p=22903 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
+2019-02-28 00:29:10,070 p=22903 u=ignw |  ignw-csr                   : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 00:31:36,188 p=22955 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 00:31:36,605 p=22955 u=ignw |  PLAY [Deploy Cisco IOS-XE Router Configurations] ****************************************************************************************************************
+2019-02-28 00:31:36,631 p=22955 u=ignw |  TASK [napalm_install_config] ************************************************************************************************************************************
+2019-02-28 00:32:43,973 p=22955 u=ignw |  fatal: [ignw-csr]: FAILED! => {"changed": false, "msg": "cannot install config: Configuration merge failed; automatic rollback attempted:\nntp server 66.228.42.59 prefer ntp server 45.76.244.193ntp server 204.9.54.119ntp server 173.255.206.154!\n                               ^\n% Invalid input detected at '^' marker.\n\n781 bytes copied in 0.146 secs (5349 bytes/sec)"}
+2019-02-28 00:32:43,975 p=22955 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/deploy_configurations.retry
+
+2019-02-28 00:32:43,976 p=22955 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
+2019-02-28 00:32:43,977 p=22955 u=ignw |  ignw-csr                   : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 00:40:20,850 p=23029 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 00:40:21,289 p=23029 u=ignw |  PLAY [Deploy Cisco IOS-XE Router Configurations] ****************************************************************************************************************
+2019-02-28 00:40:21,319 p=23029 u=ignw |  TASK [napalm_install_config] ************************************************************************************************************************************
+2019-02-28 00:41:26,608 p=23029 u=ignw |  changed: [ignw-csr] => {"changed": true, "msg": "+service timestamps log datetime localtime show-timezone\n+service password-encryption\n+logging buffered 8192\n+clock timezone PST -8 0\n+clock summer-time PDT recurring\n+ip domain name sea.acme.io\n+ip name-server 8.8.8.8\n+ip name-server 8.8.4.4\n+description to acme-sea-asa1\n+ip redirects\n+ ip address 203.0.113.1 255.255.255.192\n+ negotiation auto\n- no shut\n+interface loopback8\n+ ip address 8.8.8.8 255.255.255.255\n- no shut\n-no ip http server\n+login local\n+ntp master 5\n+ntp server 66.228.42.59 prefer\n+ntp server 45.76.244.193\n+ntp server 204.9.54.119\n+ntp server 173.255.206.154"}
+2019-02-28 00:41:26,617 p=23029 u=ignw |  TASK [debug] ****************************************************************************************************************************************************
+2019-02-28 00:41:26,682 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+service timestamps log datetime localtime show-timezone"
+}
+2019-02-28 00:41:26,686 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+service password-encryption"
+}
+2019-02-28 00:41:26,692 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+logging buffered 8192"
+}
+2019-02-28 00:41:26,697 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+clock timezone PST -8 0"
+}
+2019-02-28 00:41:26,702 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+clock summer-time PDT recurring"
+}
+2019-02-28 00:41:26,707 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ip domain name sea.acme.io"
+}
+2019-02-28 00:41:26,714 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ip name-server 8.8.8.8"
+}
+2019-02-28 00:41:26,720 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ip name-server 8.8.4.4"
+}
+2019-02-28 00:41:26,726 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+description to acme-sea-asa1"
+}
+2019-02-28 00:41:26,732 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ip redirects"
+}
+2019-02-28 00:41:26,738 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ ip address 203.0.113.1 255.255.255.192"
+}
+2019-02-28 00:41:26,745 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ negotiation auto"
+}
+2019-02-28 00:41:26,750 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "- no shut"
+}
+2019-02-28 00:41:26,757 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+interface loopback8"
+}
+2019-02-28 00:41:26,764 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ ip address 8.8.8.8 255.255.255.255"
+}
+2019-02-28 00:41:26,771 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "- no shut"
+}
+2019-02-28 00:41:26,777 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "-no ip http server"
+}
+2019-02-28 00:41:26,784 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+login local"
+}
+2019-02-28 00:41:26,789 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ntp master 5"
+}
+2019-02-28 00:41:26,794 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ntp server 66.228.42.59 prefer"
+}
+2019-02-28 00:41:26,802 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ntp server 45.76.244.193"
+}
+2019-02-28 00:41:26,809 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ntp server 204.9.54.119"
+}
+2019-02-28 00:41:26,812 p=23029 u=ignw |  ok: [ignw-csr] => (item=None) => {
+    "msg": "+ntp server 173.255.206.154"
+}
+2019-02-28 00:41:26,817 p=23029 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
+2019-02-28 00:41:26,818 p=23029 u=ignw |  ignw-csr                   : ok=2    changed=1    unreachable=0    failed=0   
+2019-02-28 00:46:29,753 p=23095 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 00:46:29,789 p=23095 u=ignw |  ERROR! Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to have been in '/home/ignw/my_network_as_code/deploy_configurations.yaml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tags:ios-xe
+  tasks:
+  ^ here
+
+2019-02-28 00:46:59,208 p=23102 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 00:46:59,628 p=23102 u=ignw |  PLAY [Deploy Cisco IOS-XE Router Configurations] ****************************************************************************************************************
+2019-02-28 00:46:59,649 p=23102 u=ignw |  PLAY [Deploy Cisco NX-OS Configurations] ************************************************************************************************************************
+2019-02-28 00:46:59,661 p=23102 u=ignw |  TASK [napalm_install_config] ************************************************************************************************************************************
+2019-02-28 00:47:42,181 p=23102 u=ignw |  changed: [acme-sea-nxos1] => {"changed": true, "msg": "feature nxapi\nusername ******** password 0 ******** role network-admin\nip domain-name sea.acme.io\nip route 0.0.0.0 0.0.0.0 10.255.255.1\n  ip route 1.1.1.1 255.255.255.255 null0\nvlan 1\n name routing_to_acme_sea_asa1\ninterface vlan1000\n ip address 10.255.255.2 255.255.255.240\n no shutdown\n switchport mode trunk\n switchport trunk native vlan 1000\n no shutdown\nboot nxos bootflash:/nxos.7.0.3.I7.3.bin\nend"}
+2019-02-28 00:47:42,189 p=23102 u=ignw |  TASK [debug] ****************************************************************************************************************************************************
+2019-02-28 00:47:42,254 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "feature nxapi"
+}
+2019-02-28 00:47:42,256 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "username ******** password 0 ******** role network-admin"
+}
+2019-02-28 00:47:42,261 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "ip domain-name sea.acme.io"
+}
+2019-02-28 00:47:42,266 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "ip route 0.0.0.0 0.0.0.0 10.255.255.1"
+}
+2019-02-28 00:47:42,272 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "  ip route 1.1.1.1 255.255.255.255 null0"
+}
+2019-02-28 00:47:42,276 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "vlan 1"
+}
+2019-02-28 00:47:42,281 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": " name routing_to_acme_sea_asa1"
+}
+2019-02-28 00:47:42,286 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "interface vlan1000"
+}
+2019-02-28 00:47:42,291 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": " ip address 10.255.255.2 255.255.255.240"
+}
+2019-02-28 00:47:42,296 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": " no shutdown"
+}
+2019-02-28 00:47:42,301 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": " switchport mode trunk"
+}
+2019-02-28 00:47:42,322 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": " switchport trunk native vlan 1000"
+}
+2019-02-28 00:47:42,325 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": " no shutdown"
+}
+2019-02-28 00:47:42,325 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "boot nxos bootflash:/nxos.7.0.3.I7.3.bin"
+}
+2019-02-28 00:47:42,326 p=23102 u=ignw |  ok: [acme-sea-nxos1] => (item=None) => {
+    "msg": "end"
+}
+2019-02-28 00:47:42,330 p=23102 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
+2019-02-28 00:47:42,331 p=23102 u=ignw |  acme-sea-nxos1             : ok=2    changed=1    unreachable=0    failed=0   
