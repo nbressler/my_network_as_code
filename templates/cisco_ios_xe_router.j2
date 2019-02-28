@@ -43,7 +43,8 @@ login local
 !
 ntp master 5
 {% for server, data in ntp.items() %}
-ntp server {{ server }}{% if data['prefer'] == true %} prefer {% endif %}\n
+ntp server {{ server }}{% if data['prefer'] == true %} prefer {% endif %}
+
 {% endfor %}
 !
 end
