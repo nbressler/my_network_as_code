@@ -28,3 +28,5 @@ ntp: {
         'prefer': false
     }
 }
+
+enable_password: ignw

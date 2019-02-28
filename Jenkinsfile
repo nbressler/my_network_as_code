@@ -28,17 +28,18 @@ node {
 		sh 'ansible-playbook generate_configurations.yaml -e "ansible_python_interpreter=jenkins_build/bin/python"'
 	}
 
-        stage ('Validate Deploy Configurations Playbook') {
-                // Validate the syntax in our deploy configurations Playbook 
-                sh 'ansible-playbook deploy_configurations.yaml -e "ansible_python_interpreter=jenkins_build/bin/python" --syntax-check'
-        }
+	stage ('Unit Testing') {
+		sh 'ansible-playbook deploy_configurations.yaml -e "ansible_python_interpreter=jenkins_build/bin/python" --syntax-check'
+		sh 'ansible-playbook validate_configurations.yaml -e "ansible_python_interpreter=jenkins_build/bin/python" --syntax-check'
+	}
 	
 	stage ('Deploy Configurations to Dev') {
 		sh 'ansible-playbook deploy_configurations.yaml -e "ansible_python_interpreter=jenkins_build/bin/python"'
 	}
 
-	stage ('Functional/Integratoin Testing') {
+	stage ('Functional/Integration Testing') {
 		// Ping stuff and make sure we didn't blow up dev!
+                sh 'ansible-playbook validate_configurations.yaml -e "ansible_python_interpreter=jenkins_build/bin/python"'
 	}
 
 	stage ('Promot Configurations to Production') {

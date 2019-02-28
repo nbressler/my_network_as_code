@@ -190,3 +190,1321 @@ The offending line appears to be:
 }
 2019-02-28 00:47:42,330 p=23102 u=ignw |  PLAY RECAP ******************************************************************************************************************************************************
 2019-02-28 00:47:42,331 p=23102 u=ignw |  acme-sea-nxos1             : ok=2    changed=1    unreachable=0    failed=0   
+2019-02-28 18:46:54,761 p=25459 u=ignw |   [WARNING]: Found variable using reserved name: tasks
+
+2019-02-28 18:46:54,762 p=25459 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 18:46:54,892 p=25459 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 18:47:41,162 p=25468 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 18:47:41,266 p=25468 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 18:47:41,299 p=25468 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'username' is undefined\n\nThe error appears to have been in '/home/ignw/my_network_as_code/validate_configurations.yaml': line 12, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - nxos_ping:\n      ^ here\n"}
+2019-02-28 18:47:41,301 p=25468 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 18:47:41,302 p=25468 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 18:47:41,302 p=25468 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:12:00,264 p=25591 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 19:12:00,362 p=25591 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 19:12:11,454 p=25599 u=ignw |  shutdown complete
+2019-02-28 19:12:11,551 p=25591 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"msg": "[Errno -2] Name or service not known"}
+2019-02-28 19:12:11,553 p=25591 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:12:11,554 p=25591 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 19:12:11,554 p=25591 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:13:27,726 p=25618 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 19:13:27,817 p=25618 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 19:13:38,854 p=25626 u=ignw |  shutdown complete
+2019-02-28 19:13:38,935 p=25618 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"msg": "[Errno -2] Name or service not known"}
+2019-02-28 19:13:38,937 p=25618 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:13:38,937 p=25618 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 19:13:38,937 p=25618 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:19:23,024 p=25666 u=ignw |  ERROR! 'nxos_ping' is not a valid attribute for a Play
+
+The error appears to have been in '/home/ignw/my_network_as_code/validate_configurations.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Validate "Core" to "Internet" Reachability
+  ^ here
+We could be wrong, but this one looks like it might be an issue with
+unbalanced quotes.  If starting a value with a quote, make sure the
+line ends with the same set of quotes.  For instance this arbitrary
+example:
+
+    foo: "bad" "wolf"
+
+Could be written as:
+
+    foo: '"bad" "wolf"'
+
+2019-02-28 19:20:40,882 p=25673 u=ignw |  ERROR! 'nxos_ping' is not a valid attribute for a Play
+
+The error appears to have been in '/home/ignw/my_network_as_code/validate_configurations.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Validate "Core" to "Internet" Reachability
+  ^ here
+We could be wrong, but this one looks like it might be an issue with
+unbalanced quotes.  If starting a value with a quote, make sure the
+line ends with the same set of quotes.  For instance this arbitrary
+example:
+
+    foo: "bad" "wolf"
+
+Could be written as:
+
+    foo: '"bad" "wolf"'
+
+2019-02-28 19:20:52,974 p=25679 u=ignw |  ERROR! 'nxos_ping' is not a valid attribute for a Play
+
+The error appears to have been in '/home/ignw/my_network_as_code/validate_configurations.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Validate "Core" to "Internet" Reachability
+  ^ here
+We could be wrong, but this one looks like it might be an issue with
+unbalanced quotes.  If starting a value with a quote, make sure the
+line ends with the same set of quotes.  For instance this arbitrary
+example:
+
+    foo: "bad" "wolf"
+
+Could be written as:
+
+    foo: '"bad" "wolf"'
+
+2019-02-28 19:21:38,515 p=25686 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 19:21:38,609 p=25686 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 19:21:49,646 p=25694 u=ignw |  shutdown complete
+2019-02-28 19:21:49,727 p=25686 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"msg": "[Errno -2] Name or service not known"}
+2019-02-28 19:21:49,730 p=25686 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:21:49,730 p=25686 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 19:21:49,730 p=25686 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:34:26,488 p=25820 u=ignw |  ERROR! the playbook: validate_configurations. could not be found
+2019-02-28 19:34:28,958 p=25827 u=ignw |  ERROR! Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to have been in '/home/ignw/my_network_as_code/validate_configurations.yaml': line 28, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      auth_pass "{{ enable_password }}"
+  tasks:
+  ^ here
+
+2019-02-28 19:34:46,922 p=25838 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 19:34:46,947 p=25838 u=ignw |  ERROR! Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to have been in '/home/ignw/my_network_as_code/group_vars/sea.yaml': line 32, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+(specified line no longer in file, maybe it changed?)
+2019-02-28 19:35:13,978 p=25850 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 19:35:14,002 p=25850 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 19:35:25,084 p=25858 u=ignw |  shutdown complete
+2019-02-28 19:35:25,180 p=25850 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"msg": "[Errno -2] Name or service not known"}
+2019-02-28 19:35:25,182 p=25850 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:35:25,182 p=25850 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 19:35:25,182 p=25850 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:35:54,374 p=25873 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] ********************
+2019-02-28 19:35:54,398 p=25873 u=ignw |  TASK [asa_command] ****************************************************************
+2019-02-28 19:36:05,447 p=25881 u=ignw |  shutdown complete
+2019-02-28 19:36:05,534 p=25873 u=ignw |  fatal: [acme-sea-asa1]: FAILED! => {"msg": "[Errno -2] Name or service not known"}
+2019-02-28 19:36:05,537 p=25873 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:36:05,537 p=25873 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 19:36:05,537 p=25873 u=ignw |  acme-sea-asa1              : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:39:44,876 p=25968 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] ********************
+2019-02-28 19:39:44,906 p=25968 u=ignw |  TASK [asa_command] ****************************************************************
+2019-02-28 19:39:45,946 paramiko.transport starting thread (client mode): 0x3e5920b8
+2019-02-28 19:39:45,947 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 19:39:46,040 paramiko.transport Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 19:39:46,040 paramiko.transport Connected (version 1.99, client Cisco-1.25)
+2019-02-28 19:39:46,041 paramiko.transport kex algos:['diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 19:39:46,041 paramiko.transport Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 19:39:46,041 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 19:39:46,042 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 19:39:46,042 paramiko.transport MAC agreed: hmac-sha1
+2019-02-28 19:39:46,042 paramiko.transport Compression agreed: none
+2019-02-28 19:39:46,082 paramiko.transport kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 19:39:46,083 paramiko.transport Switch to new keys ...
+2019-02-28 19:39:46,086 paramiko.transport userauth is OK
+2019-02-28 19:39:46,101 paramiko.transport Authentication (password) successful!
+2019-02-28 19:39:46,101 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 19:39:46,103 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 19:39:46,103 paramiko.transport Secsh channel 0 opened.
+2019-02-28 19:39:46,105 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:39:46,106 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:39:46,988 p=25968 u=ignw |  fatal: [acme-sea-asa1]: FAILED! => {"changed": false, "failed_when_result": true, "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:\nNo route to host 8.8.8.8\n\nSuccess rate is 0 percent (0/1)"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:", "No route to host 8.8.8.8", "", "Success rate is 0 percent (0/1)"]]}
+2019-02-28 19:39:46,989 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 19:39:46,990 p=25976 u=ignw |  shutdown complete
+2019-02-28 19:39:46,992 p=25968 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:39:46,992 p=25968 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 19:39:46,993 p=25968 u=ignw |  acme-sea-asa1              : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:51:07,353 p=26022 u=ignw |  ERROR! the playbook: validate_configurations. could not be found
+2019-02-28 19:51:10,885 p=26029 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] ********************
+2019-02-28 19:51:10,911 p=26029 u=ignw |  TASK [asa_command] ****************************************************************
+2019-02-28 19:51:11,878 paramiko.transport starting thread (client mode): 0xbc55d0b8
+2019-02-28 19:51:11,879 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 19:51:11,893 paramiko.transport Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 19:51:11,893 paramiko.transport Connected (version 1.99, client Cisco-1.25)
+2019-02-28 19:51:11,894 paramiko.transport kex algos:['diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 19:51:11,894 paramiko.transport Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 19:51:11,895 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 19:51:11,895 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 19:51:11,895 paramiko.transport MAC agreed: hmac-sha1
+2019-02-28 19:51:11,895 paramiko.transport Compression agreed: none
+2019-02-28 19:51:11,934 paramiko.transport kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 19:51:11,935 paramiko.transport Switch to new keys ...
+2019-02-28 19:51:11,937 paramiko.transport userauth is OK
+2019-02-28 19:51:11,953 paramiko.transport Authentication (password) successful!
+2019-02-28 19:51:11,953 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 19:51:11,955 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 19:51:11,955 paramiko.transport Secsh channel 0 opened.
+2019-02-28 19:51:11,956 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:51:11,958 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:51:12,705 p=26029 u=ignw |  fatal: [acme-sea-asa1]: FAILED! => {"changed": false, "failed_when_result": true, "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:\nNo route to host 8.8.8.8\n\nSuccess rate is 0 percent (0/1)"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:", "No route to host 8.8.8.8", "", "Success rate is 0 percent (0/1)"]]}
+2019-02-28 19:51:12,706 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 19:51:12,707 p=26037 u=ignw |  shutdown complete
+2019-02-28 19:51:12,714 p=26029 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:51:12,714 p=26029 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 19:51:12,714 p=26029 u=ignw |  acme-sea-asa1              : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:54:21,153 p=26075 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 19:54:21,179 p=26075 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 19:54:30,408 p=26075 u=ignw |   [ERROR]: User interrupted execution
+
+2019-02-28 19:54:50,307 p=26093 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 19:54:50,330 p=26093 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 19:54:51,354 paramiko.transport starting thread (client mode): 0x8ef76f60
+2019-02-28 19:54:51,354 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 19:54:51,355 paramiko.transport Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 19:54:51,355 paramiko.transport Connected (version 2.0, client Cisco-1.25)
+2019-02-28 19:54:51,357 paramiko.transport kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 19:54:51,357 paramiko.transport Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 19:54:51,357 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 19:54:51,357 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 19:54:51,357 paramiko.transport MAC agreed: hmac-sha2-256
+2019-02-28 19:54:51,357 paramiko.transport Compression agreed: none
+2019-02-28 19:54:51,558 paramiko.transport Got server p (2048 bits)
+2019-02-28 19:54:51,678 paramiko.transport kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 19:54:51,680 paramiko.transport Switch to new keys ...
+2019-02-28 19:54:51,881 paramiko.transport userauth is OK
+2019-02-28 19:54:51,883 paramiko.transport Authentication (password) successful!
+2019-02-28 19:54:51,884 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 19:54:51,885 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 19:54:51,886 paramiko.transport Secsh channel 0 opened.
+2019-02-28 19:54:51,887 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:54:51,888 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:54:53,076 p=26093 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.8.8 count 2 vrf default\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 19:54:53,077 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 19:54:53,078 p=26101 u=ignw |  shutdown complete
+2019-02-28 19:54:53,080 p=26093 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:54:53,080 p=26093 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 19:54:53,081 p=26093 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:55:09,420 p=26138 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 19:55:09,447 p=26138 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 19:55:10,579 paramiko.transport starting thread (client mode): 0x5a81f0b8
+2019-02-28 19:55:10,580 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 19:55:10,580 paramiko.transport Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 19:55:10,580 paramiko.transport Connected (version 2.0, client Cisco-1.25)
+2019-02-28 19:55:10,581 paramiko.transport kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 19:55:10,581 paramiko.transport Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 19:55:10,581 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 19:55:10,581 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 19:55:10,581 paramiko.transport MAC agreed: hmac-sha2-256
+2019-02-28 19:55:10,581 paramiko.transport Compression agreed: none
+2019-02-28 19:55:10,784 paramiko.transport Got server p (2048 bits)
+2019-02-28 19:55:10,900 paramiko.transport kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 19:55:10,901 paramiko.transport Switch to new keys ...
+2019-02-28 19:55:11,103 paramiko.transport userauth is OK
+2019-02-28 19:55:11,105 paramiko.transport Authentication (password) successful!
+2019-02-28 19:55:11,105 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 19:55:11,106 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 19:55:11,106 paramiko.transport Secsh channel 0 opened.
+2019-02-28 19:55:11,108 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:55:11,109 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:55:12,225 p=26138 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.8.8 count 2 vrf default\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 19:55:12,226 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 19:55:12,227 p=26146 u=ignw |  shutdown complete
+2019-02-28 19:55:12,229 p=26138 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:55:12,229 p=26138 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 19:55:12,230 p=26138 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 19:55:40,439 p=26280 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 19:55:40,463 p=26280 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 19:55:41,562 paramiko.transport starting thread (client mode): 0x1efd90b8
+2019-02-28 19:55:41,563 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 19:55:41,563 paramiko.transport Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 19:55:41,563 paramiko.transport Connected (version 2.0, client Cisco-1.25)
+2019-02-28 19:55:41,564 paramiko.transport kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 19:55:41,564 paramiko.transport Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 19:55:41,564 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 19:55:41,564 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 19:55:41,564 paramiko.transport MAC agreed: hmac-sha2-256
+2019-02-28 19:55:41,564 paramiko.transport Compression agreed: none
+2019-02-28 19:55:41,766 paramiko.transport Got server p (2048 bits)
+2019-02-28 19:55:41,881 paramiko.transport kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 19:55:41,883 paramiko.transport Switch to new keys ...
+2019-02-28 19:55:42,084 paramiko.transport userauth is OK
+2019-02-28 19:55:42,086 paramiko.transport Authentication (password) successful!
+2019-02-28 19:55:42,087 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 19:55:42,088 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 19:55:42,088 paramiko.transport Secsh channel 0 opened.
+2019-02-28 19:55:42,090 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:55:42,091 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 19:55:43,143 p=26280 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.8.8 count 2 vrf default\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 19:55:43,144 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 19:55:43,145 p=26288 u=ignw |  shutdown complete
+2019-02-28 19:55:43,151 p=26280 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 19:55:43,152 p=26280 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 19:55:43,152 p=26280 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 20:12:04,468 p=26354 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 20:12:04,493 p=26354 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 20:12:05,578 paramiko.transport starting thread (client mode): 0x9d5390b8
+2019-02-28 20:12:05,579 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 20:12:05,579 paramiko.transport Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 20:12:05,579 paramiko.transport Connected (version 2.0, client Cisco-1.25)
+2019-02-28 20:12:05,580 paramiko.transport kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 20:12:05,580 paramiko.transport Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 20:12:05,581 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 20:12:05,581 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 20:12:05,581 paramiko.transport MAC agreed: hmac-sha2-256
+2019-02-28 20:12:05,581 paramiko.transport Compression agreed: none
+2019-02-28 20:12:05,782 paramiko.transport Got server p (2048 bits)
+2019-02-28 20:12:05,919 paramiko.transport kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 20:12:05,920 paramiko.transport Switch to new keys ...
+2019-02-28 20:12:06,122 paramiko.transport userauth is OK
+2019-02-28 20:12:06,124 paramiko.transport Authentication (password) successful!
+2019-02-28 20:12:06,125 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 20:12:06,126 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 20:12:06,126 paramiko.transport Secsh channel 0 opened.
+2019-02-28 20:12:06,128 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:12:06,129 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:12:07,173 p=26354 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.8.8 count 2\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 20:12:07,174 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 20:12:07,175 p=26362 u=ignw |  shutdown complete
+2019-02-28 20:12:07,177 p=26354 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 20:12:07,177 p=26354 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 20:12:07,177 p=26354 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 20:16:46,237 p=26416 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] *********************************************************************************************************************************************
+2019-02-28 20:16:46,262 p=26416 u=ignw |  TASK [asa_command] *****************************************************************************************************************************************************************************************
+2019-02-28 20:16:47,388 paramiko.transport starting thread (client mode): 0x6a9ce0b8
+2019-02-28 20:16:47,388 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 20:16:47,393 paramiko.transport Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 20:16:47,393 paramiko.transport Connected (version 1.99, client Cisco-1.25)
+2019-02-28 20:16:47,394 paramiko.transport kex algos:['diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 20:16:47,394 paramiko.transport Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 20:16:47,395 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 20:16:47,395 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 20:16:47,395 paramiko.transport MAC agreed: hmac-sha1
+2019-02-28 20:16:47,395 paramiko.transport Compression agreed: none
+2019-02-28 20:16:47,432 paramiko.transport kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 20:16:47,433 paramiko.transport Switch to new keys ...
+2019-02-28 20:16:47,435 paramiko.transport userauth is OK
+2019-02-28 20:16:47,451 paramiko.transport Authentication (password) successful!
+2019-02-28 20:16:47,452 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 20:16:47,453 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 20:16:47,453 paramiko.transport Secsh channel 0 opened.
+2019-02-28 20:16:47,455 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:16:47,456 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:16:48,214 p=26416 u=ignw |  fatal: [acme-sea-asa1]: FAILED! => {"changed": false, "failed_when_result": true, "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:\nNo route to host 8.8.8.8\n\nSuccess rate is 0 percent (0/1)"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:", "No route to host 8.8.8.8", "", "Success rate is 0 percent (0/1)"]]}
+2019-02-28 20:16:48,216 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 20:16:48,217 p=26424 u=ignw |  shutdown complete
+2019-02-28 20:16:48,218 p=26416 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 20:16:48,219 p=26416 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 20:16:48,219 p=26416 u=ignw |  acme-sea-asa1              : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 20:26:30,176 p=26503 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 20:26:30,203 p=26503 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 20:26:31,244 paramiko.transport starting thread (client mode): 0xe00cc0b8
+2019-02-28 20:26:31,244 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 20:26:31,245 paramiko.transport Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 20:26:31,245 paramiko.transport Connected (version 2.0, client Cisco-1.25)
+2019-02-28 20:26:31,247 paramiko.transport kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 20:26:31,247 paramiko.transport Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 20:26:31,247 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 20:26:31,247 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 20:26:31,247 paramiko.transport MAC agreed: hmac-sha2-256
+2019-02-28 20:26:31,247 paramiko.transport Compression agreed: none
+2019-02-28 20:26:31,449 paramiko.transport Got server p (2048 bits)
+2019-02-28 20:26:31,572 paramiko.transport kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 20:26:31,573 paramiko.transport Switch to new keys ...
+2019-02-28 20:26:31,775 paramiko.transport userauth is OK
+2019-02-28 20:26:31,777 paramiko.transport Authentication (password) successful!
+2019-02-28 20:26:31,777 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 20:26:31,779 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 20:26:31,779 paramiko.transport Secsh channel 0 opened.
+2019-02-28 20:26:31,781 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:26:31,782 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:26:32,829 p=26503 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.8.8 count 2\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 20:26:32,831 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 20:26:32,832 p=26511 u=ignw |  shutdown complete
+2019-02-28 20:26:32,833 p=26503 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 20:26:32,834 p=26503 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 20:26:32,834 p=26503 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 20:26:53,673 p=26549 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 20:26:53,699 p=26549 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 20:26:54,773 paramiko.transport starting thread (client mode): 0x440480b8
+2019-02-28 20:26:54,774 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 20:26:54,774 paramiko.transport Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 20:26:54,774 paramiko.transport Connected (version 2.0, client Cisco-1.25)
+2019-02-28 20:26:54,775 paramiko.transport kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 20:26:54,775 paramiko.transport Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 20:26:54,775 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 20:26:54,775 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 20:26:54,775 paramiko.transport MAC agreed: hmac-sha2-256
+2019-02-28 20:26:54,775 paramiko.transport Compression agreed: none
+2019-02-28 20:26:54,977 paramiko.transport Got server p (2048 bits)
+2019-02-28 20:26:55,093 paramiko.transport kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 20:26:55,094 paramiko.transport Switch to new keys ...
+2019-02-28 20:26:55,295 paramiko.transport userauth is OK
+2019-02-28 20:26:55,296 paramiko.transport Authentication (password) successful!
+2019-02-28 20:26:55,297 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 20:26:55,298 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 20:26:55,299 paramiko.transport Secsh channel 0 opened.
+2019-02-28 20:26:55,300 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:26:55,302 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:26:56,408 p=26549 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.4.4 count 2\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 20:26:56,409 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 20:26:56,410 p=26557 u=ignw |  shutdown complete
+2019-02-28 20:26:56,414 p=26549 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 20:26:56,414 p=26549 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 20:26:56,414 p=26549 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 20:27:25,428 p=26601 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] *********************************************************************************************************************************************
+2019-02-28 20:27:25,459 p=26601 u=ignw |  TASK [asa_command] *****************************************************************************************************************************************************************************************
+2019-02-28 20:27:26,539 paramiko.transport starting thread (client mode): 0xc466a0b8
+2019-02-28 20:27:26,539 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 20:27:26,540 paramiko.transport Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 20:27:26,540 paramiko.transport Connected (version 1.99, client Cisco-1.25)
+2019-02-28 20:27:26,540 paramiko.transport kex algos:['diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 20:27:26,541 paramiko.transport Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 20:27:26,541 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 20:27:26,541 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 20:27:26,541 paramiko.transport MAC agreed: hmac-sha1
+2019-02-28 20:27:26,541 paramiko.transport Compression agreed: none
+2019-02-28 20:27:26,580 paramiko.transport kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 20:27:26,581 paramiko.transport Switch to new keys ...
+2019-02-28 20:27:26,583 paramiko.transport userauth is OK
+2019-02-28 20:27:26,599 paramiko.transport Authentication (password) successful!
+2019-02-28 20:27:26,600 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 20:27:26,601 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 20:27:26,601 paramiko.transport Secsh channel 0 opened.
+2019-02-28 20:27:26,602 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:27:26,604 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:27:27,335 p=26601 u=ignw |  ok: [acme-sea-asa1]
+2019-02-28 20:27:27,344 p=26601 u=ignw |  TASK [debug] ***********************************************************************************************************************************************************************************************
+2019-02-28 20:27:27,398 p=26601 u=ignw |  ok: [acme-sea-asa1] => {
+    "msg": "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms"
+}
+2019-02-28 20:27:27,400 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 20:27:27,401 p=26609 u=ignw |  shutdown complete
+2019-02-28 20:27:27,402 p=26601 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 20:27:27,402 p=26601 u=ignw |  acme-sea-asa1              : ok=2    changed=0    unreachable=0    failed=0   
+2019-02-28 20:36:46,994 p=26685 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 20:36:47,015 p=26685 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 20:36:48,119 paramiko.transport starting thread (client mode): 0x12c3a0b8
+2019-02-28 20:36:48,120 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 20:36:48,120 paramiko.transport Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 20:36:48,120 paramiko.transport Connected (version 2.0, client Cisco-1.25)
+2019-02-28 20:36:48,121 paramiko.transport kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 20:36:48,121 paramiko.transport Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 20:36:48,121 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 20:36:48,122 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 20:36:48,122 paramiko.transport MAC agreed: hmac-sha2-256
+2019-02-28 20:36:48,122 paramiko.transport Compression agreed: none
+2019-02-28 20:36:48,323 paramiko.transport Got server p (2048 bits)
+2019-02-28 20:36:48,451 paramiko.transport kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 20:36:48,452 paramiko.transport Switch to new keys ...
+2019-02-28 20:36:48,654 paramiko.transport userauth is OK
+2019-02-28 20:36:48,656 paramiko.transport Authentication (password) successful!
+2019-02-28 20:36:48,656 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 20:36:48,658 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 20:36:48,658 paramiko.transport Secsh channel 0 opened.
+2019-02-28 20:36:48,659 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:36:48,661 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:36:49,731 p=26685 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.4.4 count 2\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 20:36:49,732 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 20:36:49,733 p=26693 u=ignw |  shutdown complete
+2019-02-28 20:36:49,735 p=26685 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 20:36:49,735 p=26685 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 20:36:49,735 p=26685 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 20:42:41,728 p=27952 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 20:42:41,754 p=27952 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 20:42:42,848 paramiko.transport starting thread (client mode): 0x4a2f30b8
+2019-02-28 20:42:42,848 paramiko.transport Local version/idstring: SSH-2.0-paramiko_2.4.1
+2019-02-28 20:42:42,849 paramiko.transport Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 20:42:42,849 paramiko.transport Connected (version 2.0, client Cisco-1.25)
+2019-02-28 20:42:42,850 paramiko.transport kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-28 20:42:42,850 paramiko.transport Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 20:42:42,850 paramiko.transport HostKey agreed: ssh-rsa
+2019-02-28 20:42:42,850 paramiko.transport Cipher agreed: aes128-ctr
+2019-02-28 20:42:42,851 paramiko.transport MAC agreed: hmac-sha2-256
+2019-02-28 20:42:42,851 paramiko.transport Compression agreed: none
+2019-02-28 20:42:43,052 paramiko.transport Got server p (2048 bits)
+2019-02-28 20:42:43,169 paramiko.transport kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 20:42:43,170 paramiko.transport Switch to new keys ...
+2019-02-28 20:42:43,371 paramiko.transport userauth is OK
+2019-02-28 20:42:43,373 paramiko.transport Authentication (password) successful!
+2019-02-28 20:42:43,373 paramiko.transport [chan 0] Max packet in: 32768 bytes
+2019-02-28 20:42:43,374 paramiko.transport [chan 0] Max packet out: 4096 bytes
+2019-02-28 20:42:43,375 paramiko.transport Secsh channel 0 opened.
+2019-02-28 20:42:43,376 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:42:43,377 paramiko.transport [chan 0] Sesch channel 0 request ok
+2019-02-28 20:42:44,446 p=27952 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.4.4 count 2\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 20:42:44,447 paramiko.transport [chan 0] EOF sent (0)
+2019-02-28 20:42:44,448 p=27960 u=ignw |  shutdown complete
+2019-02-28 20:42:44,450 p=27952 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 20:42:44,450 p=27952 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 20:42:44,450 p=27952 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-28 21:06:45,815 p=30154 u=ignw |  ERROR! the playbook: validate_configurations. could not be found
+2019-02-28 21:06:48,984 p=30159 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 21:06:48,999 p=30159 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 21:06:49,789 p=30172 u=ignw | paramiko [10.0.0.5] starting thread (client mode): 0x5bc77050L
+2019-02-28 21:06:49,790 p=30172 u=ignw | paramiko [10.0.0.5] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:06:49,790 p=30172 u=ignw | paramiko [10.0.0.5] Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 21:06:49,791 p=30172 u=ignw | paramiko [10.0.0.5] Connected (version 2.0, client Cisco-1.25)
+2019-02-28 21:06:49,792 p=30172 u=ignw | paramiko [10.0.0.5] kex algos:[u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:06:49,792 p=30172 u=ignw | paramiko [10.0.0.5] Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 21:06:49,792 p=30172 u=ignw | paramiko [10.0.0.5] Cipher agreed: aes128-ctr
+2019-02-28 21:06:49,792 p=30172 u=ignw | paramiko [10.0.0.5] MAC agreed: hmac-sha2-256
+2019-02-28 21:06:49,792 p=30172 u=ignw | paramiko [10.0.0.5] Compression agreed: none
+2019-02-28 21:06:49,995 p=30172 u=ignw | paramiko [10.0.0.5] Got server p (2048 bits)
+2019-02-28 21:06:50,115 p=30172 u=ignw | paramiko [10.0.0.5] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:06:50,116 p=30172 u=ignw | paramiko [10.0.0.5] Switch to new keys ...
+2019-02-28 21:06:50,318 p=30172 u=ignw | paramiko [10.0.0.5] userauth is OK
+2019-02-28 21:06:50,320 p=30172 u=ignw | paramiko [10.0.0.5] Authentication (password) successful!
+2019-02-28 21:06:50,322 p=30172 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:06:50,323 p=30172 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:06:50,323 p=30172 u=ignw | paramiko [10.0.0.5] Secsh channel 0 opened.
+2019-02-28 21:06:50,327 p=30172 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:06:50,328 p=30172 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:06:50,779 p=30159 u=ignw |  network_os is set to nxos
+2019-02-28 21:06:52,010 p=30159 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2019-02-28 21:06:52,012 p=30159 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.4.4 count 5\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 21:06:52,013 p=30172 u=ignw | paramiko [10.0.0.5] [chan 0] EOF sent (0)
+2019-02-28 21:06:52,040 p=30172 u=ignw | paramiko [10.0.0.5] EOF in transport thread
+2019-02-28 21:06:52,048 p=30159 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:06:52,049 p=30159 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 21:06:52,049 p=30159 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:06:52,147 p=30167 u=ignw |  shutdown complete
+2019-02-28 21:07:12,382 p=30202 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:07:12,397 p=30202 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:07:13,152 p=30215 u=ignw | paramiko [10.0.0.5] starting thread (client mode): 0xe2284050L
+2019-02-28 21:07:13,152 p=30215 u=ignw | paramiko [10.0.0.5] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:07:13,153 p=30215 u=ignw | paramiko [10.0.0.5] Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 21:07:13,153 p=30215 u=ignw | paramiko [10.0.0.5] Connected (version 2.0, client Cisco-1.25)
+2019-02-28 21:07:13,154 p=30215 u=ignw | paramiko [10.0.0.5] kex algos:[u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:07:13,154 p=30215 u=ignw | paramiko [10.0.0.5] Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 21:07:13,154 p=30215 u=ignw | paramiko [10.0.0.5] Cipher agreed: aes128-ctr
+2019-02-28 21:07:13,154 p=30215 u=ignw | paramiko [10.0.0.5] MAC agreed: hmac-sha2-256
+2019-02-28 21:07:13,154 p=30215 u=ignw | paramiko [10.0.0.5] Compression agreed: none
+2019-02-28 21:07:13,356 p=30215 u=ignw | paramiko [10.0.0.5] Got server p (2048 bits)
+2019-02-28 21:07:13,491 p=30215 u=ignw | paramiko [10.0.0.5] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:07:13,492 p=30215 u=ignw | paramiko [10.0.0.5] Switch to new keys ...
+2019-02-28 21:07:13,693 p=30215 u=ignw | paramiko [10.0.0.5] userauth is OK
+2019-02-28 21:07:13,695 p=30215 u=ignw | paramiko [10.0.0.5] Authentication (password) successful!
+2019-02-28 21:07:13,697 p=30215 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:07:13,699 p=30215 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:07:13,699 p=30215 u=ignw | paramiko [10.0.0.5] Secsh channel 0 opened.
+2019-02-28 21:07:13,702 p=30215 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:07:13,704 p=30215 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:07:14,232 p=30202 u=ignw |  network_os is set to nxos
+2019-02-28 21:07:15,431 p=30202 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:07:15,432 p=30202 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.4.4 count 5\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 21:07:15,433 p=30215 u=ignw | paramiko [10.0.0.5] [chan 0] EOF sent (0)
+2019-02-28 21:07:15,470 p=30215 u=ignw | paramiko [10.0.0.5] EOF in transport thread
+2019-02-28 21:07:15,500 p=30202 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:07:15,500 p=30202 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:07:15,501 p=30202 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:07:15,599 p=30210 u=ignw |  shutdown complete
+2019-02-28 21:07:25,018 p=30244 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:07:25,570 p=30244 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:07:25,584 p=30244 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:07:26,311 p=30257 u=ignw | paramiko [10.0.0.5] starting thread (client mode): 0xc6d7f050L
+2019-02-28 21:07:26,312 p=30257 u=ignw | paramiko [10.0.0.5] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:07:26,312 p=30257 u=ignw | paramiko [10.0.0.5] Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 21:07:26,312 p=30257 u=ignw | paramiko [10.0.0.5] Connected (version 2.0, client Cisco-1.25)
+2019-02-28 21:07:26,313 p=30257 u=ignw | paramiko [10.0.0.5] kex algos:[u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:07:26,313 p=30257 u=ignw | paramiko [10.0.0.5] Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 21:07:26,314 p=30257 u=ignw | paramiko [10.0.0.5] Cipher agreed: aes128-ctr
+2019-02-28 21:07:26,314 p=30257 u=ignw | paramiko [10.0.0.5] MAC agreed: hmac-sha2-256
+2019-02-28 21:07:26,314 p=30257 u=ignw | paramiko [10.0.0.5] Compression agreed: none
+2019-02-28 21:07:26,516 p=30257 u=ignw | paramiko [10.0.0.5] Got server p (2048 bits)
+2019-02-28 21:07:26,639 p=30257 u=ignw | paramiko [10.0.0.5] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:07:26,640 p=30257 u=ignw | paramiko [10.0.0.5] Switch to new keys ...
+2019-02-28 21:07:26,842 p=30257 u=ignw | paramiko [10.0.0.5] userauth is OK
+2019-02-28 21:07:26,844 p=30257 u=ignw | paramiko [10.0.0.5] Authentication (password) successful!
+2019-02-28 21:07:26,845 p=30257 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:07:26,846 p=30257 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:07:26,846 p=30257 u=ignw | paramiko [10.0.0.5] Secsh channel 0 opened.
+2019-02-28 21:07:26,850 p=30257 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:07:26,852 p=30257 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:07:27,325 p=30244 u=ignw |  network_os is set to nxos
+2019-02-28 21:07:28,497 p=30244 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:07:28,498 p=30244 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.4.4 count 5\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 21:07:28,499 p=30257 u=ignw | paramiko [10.0.0.5] [chan 0] EOF sent (0)
+2019-02-28 21:07:28,531 p=30257 u=ignw | paramiko [10.0.0.5] EOF in transport thread
+2019-02-28 21:07:28,534 p=30244 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:07:28,535 p=30244 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:07:28,535 p=30244 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:07:28,633 p=30252 u=ignw |  shutdown complete
+2019-02-28 21:15:58,142 p=30364 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:15:58,142 p=30364 u=ignw |  ERROR! the playbook: validate_configurations. could not be found
+2019-02-28 21:16:00,040 p=30369 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:16:00,571 p=30369 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:16:00,584 p=30369 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:16:01,260 p=30382 u=ignw | paramiko [10.0.0.5] starting thread (client mode): 0xc702050L
+2019-02-28 21:16:01,260 p=30382 u=ignw | paramiko [10.0.0.5] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:16:01,260 p=30382 u=ignw | paramiko [10.0.0.5] Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 21:16:01,261 p=30382 u=ignw | paramiko [10.0.0.5] Connected (version 2.0, client Cisco-1.25)
+2019-02-28 21:16:01,263 p=30382 u=ignw | paramiko [10.0.0.5] kex algos:[u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:16:01,263 p=30382 u=ignw | paramiko [10.0.0.5] Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 21:16:01,263 p=30382 u=ignw | paramiko [10.0.0.5] Cipher agreed: aes128-ctr
+2019-02-28 21:16:01,263 p=30382 u=ignw | paramiko [10.0.0.5] MAC agreed: hmac-sha2-256
+2019-02-28 21:16:01,263 p=30382 u=ignw | paramiko [10.0.0.5] Compression agreed: none
+2019-02-28 21:16:01,465 p=30382 u=ignw | paramiko [10.0.0.5] Got server p (2048 bits)
+2019-02-28 21:16:01,593 p=30382 u=ignw | paramiko [10.0.0.5] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:16:01,594 p=30382 u=ignw | paramiko [10.0.0.5] Switch to new keys ...
+2019-02-28 21:16:01,795 p=30382 u=ignw | paramiko [10.0.0.5] userauth is OK
+2019-02-28 21:16:01,797 p=30382 u=ignw | paramiko [10.0.0.5] Authentication (password) successful!
+2019-02-28 21:16:01,798 p=30382 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:16:01,799 p=30382 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:16:01,799 p=30382 u=ignw | paramiko [10.0.0.5] Secsh channel 0 opened.
+2019-02-28 21:16:01,800 p=30382 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:16:01,802 p=30382 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:16:02,263 p=30369 u=ignw |  network_os is set to nxos
+2019-02-28 21:16:03,374 p=30369 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:16:03,374 p=30369 u=ignw |  fatal: [acme-sea-nxos1]: FAILED! => {"changed": false, "msg": "ping 8.8.4.4 count 5\r\n                      ^\r\n% Invalid input detected at '^' marker.\r\n\r\n********-csr#"}
+2019-02-28 21:16:03,376 p=30382 u=ignw | paramiko [10.0.0.5] [chan 0] EOF sent (0)
+2019-02-28 21:16:03,410 p=30382 u=ignw | paramiko [10.0.0.5] EOF in transport thread
+2019-02-28 21:16:03,444 p=30369 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:16:03,444 p=30369 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:16:03,445 p=30369 u=ignw |  acme-sea-nxos1             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:16:03,542 p=30377 u=ignw |  shutdown complete
+2019-02-28 21:18:46,720 p=30441 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:18:47,248 p=30441 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:18:47,264 p=30441 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:18:47,925 p=30454 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0x63285050L
+2019-02-28 21:18:47,925 p=30454 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:18:48,134 p=30454 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:18:48,134 p=30454 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:18:48,139 p=30454 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:18:48,139 p=30454 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:18:48,139 p=30454 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:18:48,139 p=30454 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:18:48,139 p=30454 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:18:48,189 p=30454 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:18:48,190 p=30454 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:18:48,296 p=30454 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:18:48,316 p=30454 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:18:48,316 p=30454 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:18:48,322 p=30454 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:18:48,323 p=30454 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:18:48,324 p=30454 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:18:48,368 p=30454 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:18:48,368 p=30454 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:18:48,389 p=30454 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:18:48,393 p=30454 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:18:49,158 p=30441 u=ignw |  network_os is set to nxos
+2019-02-28 21:18:54,110 p=30441 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:18:54,113 p=30441 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 5.905, "max": 6.74, "min": 5.414}}
+2019-02-28 21:18:54,116 p=30454 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:18:54,137 p=30454 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:18:54,154 p=30441 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] *********************************************************************************************************************************************
+2019-02-28 21:18:54,162 p=30441 u=ignw |  TASK [asa_command] *****************************************************************************************************************************************************************************************
+2019-02-28 21:18:54,249 p=30449 u=ignw |  shutdown complete
+2019-02-28 21:18:54,876 p=30491 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0x1945ee10L
+2019-02-28 21:18:54,877 p=30491 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:18:54,877 p=30491 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:18:54,878 p=30491 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:18:54,879 p=30491 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:18:54,879 p=30491 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:18:54,879 p=30491 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:18:54,879 p=30491 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:18:54,880 p=30491 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:18:54,918 p=30491 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:18:54,919 p=30491 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:18:54,927 p=30491 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:18:54,943 p=30491 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:18:54,958 p=30491 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:18:54,960 p=30491 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:18:54,960 p=30491 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:18:54,963 p=30491 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:18:54,965 p=30491 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:18:55,358 p=30441 u=ignw |  network_os is set to asa
+2019-02-28 21:18:56,124 p=30441 u=ignw |  ok: [acme-sea-asa1] => {"changed": false, "failed_when_result": false, "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms"]]}
+2019-02-28 21:18:56,131 p=30441 u=ignw |  TASK [debug] ***********************************************************************************************************************************************************************************************
+2019-02-28 21:18:56,157 p=30441 u=ignw |  ok: [acme-sea-asa1] => {
+    "msg": "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms"
+}
+2019-02-28 21:18:56,160 p=30491 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:18:56,163 p=30491 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:18:56,166 p=30441 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:18:56,167 p=30441 u=ignw |  acme-sea-asa1              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:18:56,167 p=30441 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:18:56,266 p=30486 u=ignw |  shutdown complete
+2019-02-28 21:21:16,898 p=30527 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:21:17,557 p=30527 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:21:17,572 p=30527 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:21:18,250 p=30540 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0xef339050L
+2019-02-28 21:21:18,251 p=30540 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:21:18,467 p=30540 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:21:18,468 p=30540 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:21:18,471 p=30540 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:21:18,471 p=30540 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:21:18,471 p=30540 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:21:18,471 p=30540 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:21:18,471 p=30540 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:21:18,522 p=30540 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:21:18,523 p=30540 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:21:18,634 p=30540 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:21:18,656 p=30540 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:21:18,656 p=30540 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:21:18,660 p=30540 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:21:18,661 p=30540 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:21:18,661 p=30540 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:21:18,704 p=30540 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:21:18,704 p=30540 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:21:18,727 p=30540 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:21:18,731 p=30540 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:21:19,509 p=30527 u=ignw |  network_os is set to nxos
+2019-02-28 21:21:24,084 p=30527 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:21:24,085 p=30527 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 6.845, "max": 10.091, "min": 5.272}}
+2019-02-28 21:21:24,087 p=30540 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:21:24,107 p=30540 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:21:24,126 p=30527 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] *********************************************************************************************************************************************
+2019-02-28 21:21:24,135 p=30527 u=ignw |  TASK [asa_command] *****************************************************************************************************************************************************************************************
+2019-02-28 21:21:24,220 p=30535 u=ignw |  shutdown complete
+2019-02-28 21:21:24,885 p=30577 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0xdb4e3e10L
+2019-02-28 21:21:24,886 p=30577 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:21:24,887 p=30577 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:21:24,887 p=30577 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:21:24,888 p=30577 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:21:24,888 p=30577 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:21:24,888 p=30577 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:21:24,889 p=30577 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:21:24,889 p=30577 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:21:24,934 p=30577 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:21:24,935 p=30577 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:21:24,952 p=30577 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:21:24,971 p=30577 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:21:24,982 p=30577 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:21:24,984 p=30577 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:21:24,984 p=30577 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:21:24,987 p=30577 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:21:24,989 p=30577 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:21:25,390 p=30527 u=ignw |  network_os is set to asa
+2019-02-28 21:21:26,236 p=30527 u=ignw |  ok: [acme-sea-asa1] => {"changed": false, "failed_when_result": false, "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"]]}
+2019-02-28 21:21:26,243 p=30527 u=ignw |  TASK [debug] ***********************************************************************************************************************************************************************************************
+2019-02-28 21:21:26,270 p=30527 u=ignw |  ok: [acme-sea-asa1] => {
+    "msg": "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"
+}
+2019-02-28 21:21:26,272 p=30577 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:21:26,274 p=30577 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:21:26,275 p=30527 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:21:26,275 p=30527 u=ignw |  acme-sea-asa1              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:21:26,275 p=30527 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:21:26,375 p=30572 u=ignw |  shutdown complete
+2019-02-28 21:25:53,328 p=30618 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:25:53,769 p=30618 u=ignw |  ERROR! 'with_item' is not a valid attribute for a Task
+
+The error appears to be in '/home/ignw/my_network_as_code/validate_configurations.yaml': line 31, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - asa_command:
+      ^ here
+
+This error can be suppressed as a warning using the "invalid_task_attribute_failed" configuration
+2019-02-28 21:26:06,694 p=30625 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:26:07,233 p=30625 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 21:26:07,248 p=30625 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 21:26:07,989 p=30639 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0x631b5050L
+2019-02-28 21:26:07,990 p=30639 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:26:08,231 p=30639 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:26:08,231 p=30639 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:26:08,235 p=30639 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:26:08,235 p=30639 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:26:08,235 p=30639 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:26:08,235 p=30639 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:26:08,235 p=30639 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:26:08,289 p=30639 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:26:08,290 p=30639 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:26:08,397 p=30639 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:26:08,422 p=30639 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:26:08,422 p=30639 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:26:08,425 p=30639 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:26:08,426 p=30639 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:26:08,426 p=30639 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:26:08,468 p=30639 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:26:08,468 p=30639 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:26:08,493 p=30639 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:26:08,498 p=30639 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:26:09,312 p=30625 u=ignw |  network_os is set to nxos
+2019-02-28 21:26:13,755 p=30625 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2019-02-28 21:26:13,756 p=30625 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 6.382, "max": 8.908, "min": 5.141}}
+2019-02-28 21:26:13,759 p=30639 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:26:13,781 p=30639 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:26:13,798 p=30625 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] ********************
+2019-02-28 21:26:13,805 p=30625 u=ignw |  TASK [asa_command] ****************************************************************
+2019-02-28 21:26:13,892 p=30633 u=ignw |  shutdown complete
+2019-02-28 21:26:14,587 p=30676 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0x6a778e10L
+2019-02-28 21:26:14,588 p=30676 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:26:14,590 p=30676 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:26:14,591 p=30676 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:26:14,592 p=30676 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:26:14,592 p=30676 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:26:14,592 p=30676 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:26:14,592 p=30676 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:26:14,592 p=30676 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:26:14,632 p=30676 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:26:14,632 p=30676 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:26:14,649 p=30676 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:26:14,665 p=30676 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:26:14,680 p=30676 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:26:14,682 p=30676 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:26:14,682 p=30676 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:26:14,685 p=30676 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:26:14,689 p=30676 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:26:15,101 p=30625 u=ignw |  network_os is set to asa
+2019-02-28 21:26:15,968 p=30625 u=ignw |  failed: [acme-sea-asa1] (item=8.8.8.8) => {"changed": false, "failed_when_result": true, "item": "8.8.8.8", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:\nNo route to host 8.8.8.8\n\nSuccess rate is 0 percent (0/1)"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:", "No route to host 8.8.8.8", "", "Success rate is 0 percent (0/1)"]]}
+2019-02-28 21:26:17,267 p=30625 u=ignw |  ok: [acme-sea-asa1] => (item=10.255.255.2) => {"changed": false, "failed_when_result": false, "item": "10.255.255.2", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/4/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/4/10 ms"]]}
+2019-02-28 21:26:17,269 p=30625 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:26:17,270 p=30625 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 21:26:17,270 p=30625 u=ignw |  acme-sea-asa1              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:26:17,270 p=30625 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:26:47,216 p=30671 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:26:47,320 p=30676 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:26:47,322 p=30676 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:26:47,324 p=30671 u=ignw |  shutdown complete
+2019-02-28 21:30:21,766 p=30740 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:30:22,358 p=30740 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 21:30:22,372 p=30740 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 21:30:23,127 p=30753 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0xa817e050L
+2019-02-28 21:30:23,127 p=30753 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:30:23,354 p=30753 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:30:23,354 p=30753 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:30:23,358 p=30753 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:30:23,358 p=30753 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:30:23,358 p=30753 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:30:23,358 p=30753 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:30:23,358 p=30753 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:30:23,409 p=30753 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:30:23,410 p=30753 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:30:23,521 p=30753 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:30:23,541 p=30753 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:30:23,542 p=30753 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:30:23,545 p=30753 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:30:23,546 p=30753 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:30:23,546 p=30753 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:30:23,588 p=30753 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:30:23,588 p=30753 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:30:23,612 p=30753 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:30:23,617 p=30753 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:30:24,447 p=30740 u=ignw |  network_os is set to nxos
+2019-02-28 21:30:29,025 p=30740 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2019-02-28 21:30:29,026 p=30740 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 6.4, "max": 7.044, "min": 5.745}}
+2019-02-28 21:30:29,028 p=30753 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:30:29,054 p=30753 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:30:29,070 p=30740 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] ********************
+2019-02-28 21:30:29,083 p=30740 u=ignw |  TASK [asa_command] ****************************************************************
+2019-02-28 21:30:29,162 p=30748 u=ignw |  shutdown complete
+2019-02-28 21:30:29,860 p=30790 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0x514be10L
+2019-02-28 21:30:29,861 p=30790 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:30:29,861 p=30790 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:30:29,862 p=30790 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:30:29,863 p=30790 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:30:29,863 p=30790 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:30:29,863 p=30790 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:30:29,863 p=30790 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:30:29,863 p=30790 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:30:29,903 p=30790 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:30:29,903 p=30790 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:30:29,912 p=30790 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:30:29,928 p=30790 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:30:29,943 p=30790 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:30:29,945 p=30790 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:30:29,945 p=30790 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:30:29,948 p=30790 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:30:29,950 p=30790 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:30:30,340 p=30740 u=ignw |  network_os is set to asa
+2019-02-28 21:30:31,165 p=30740 u=ignw |  failed: [acme-sea-asa1] (item=8.8.8.8) => {"changed": false, "failed_when_result": true, "item": "8.8.8.8", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:\nNo route to host 8.8.8.8\n\nSuccess rate is 0 percent (0/1)"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:", "No route to host 8.8.8.8", "", "Success rate is 0 percent (0/1)"]]}
+2019-02-28 21:30:32,341 p=30740 u=ignw |  ok: [acme-sea-asa1] => (item=10.255.255.2) => {"changed": false, "failed_when_result": false, "item": "10.255.255.2", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/6/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/6/10 ms"]]}
+2019-02-28 21:30:32,345 p=30740 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:30:32,345 p=30740 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 21:30:32,346 p=30740 u=ignw |  acme-sea-asa1              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:30:32,346 p=30740 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:31:02,298 p=30785 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:31:02,399 p=30790 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:31:02,401 p=30790 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:31:02,403 p=30785 u=ignw |  shutdown complete
+2019-02-28 21:31:13,559 p=30851 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:31:14,186 p=30851 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] *********************************
+2019-02-28 21:31:14,201 p=30851 u=ignw |  TASK [nxos_ping] ******************************************************************
+2019-02-28 21:31:14,969 p=30864 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0x12bca050L
+2019-02-28 21:31:14,969 p=30864 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:31:15,204 p=30864 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:31:15,204 p=30864 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:31:15,207 p=30864 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:31:15,207 p=30864 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:31:15,207 p=30864 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:31:15,208 p=30864 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:31:15,208 p=30864 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:31:15,265 p=30864 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:31:15,266 p=30864 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:31:15,372 p=30864 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:31:15,391 p=30864 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:31:15,392 p=30864 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:31:15,403 p=30864 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:31:15,405 p=30864 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:31:15,405 p=30864 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:31:15,448 p=30864 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:31:15,448 p=30864 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:31:15,471 p=30864 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:31:15,475 p=30864 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:31:16,288 p=30851 u=ignw |  network_os is set to nxos
+2019-02-28 21:31:20,787 p=30851 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type
+string). If this does not look like what you expect, quote the entire value to
+ensure it does not change.
+
+2019-02-28 21:31:20,788 p=30851 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 7.418, "max": 8.692, "min": 6.301}}
+2019-02-28 21:31:20,790 p=30864 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:31:20,803 p=30864 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:31:20,815 p=30851 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] ********************
+2019-02-28 21:31:20,823 p=30851 u=ignw |  TASK [asa_command] ****************************************************************
+2019-02-28 21:31:20,907 p=30859 u=ignw |  shutdown complete
+2019-02-28 21:31:21,645 p=30901 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0x6c6a1e10L
+2019-02-28 21:31:21,645 p=30901 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:31:21,648 p=30901 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:31:21,648 p=30901 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:31:21,649 p=30901 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:31:21,649 p=30901 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:31:21,649 p=30901 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:31:21,649 p=30901 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:31:21,649 p=30901 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:31:21,690 p=30901 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:31:21,691 p=30901 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:31:21,708 p=30901 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:31:21,723 p=30901 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:31:21,738 p=30901 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:31:21,740 p=30901 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:31:21,740 p=30901 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:31:21,743 p=30901 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:31:21,745 p=30901 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:31:22,153 p=30851 u=ignw |  network_os is set to asa
+2019-02-28 21:31:22,974 p=30851 u=ignw |  ok: [acme-sea-asa1] => (item=8.8.4.4) => {"changed": false, "failed_when_result": false, "item": "8.8.4.4", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms"]]}
+2019-02-28 21:31:24,183 p=30851 u=ignw |  ok: [acme-sea-asa1] => (item=10.255.255.2) => {"changed": false, "failed_when_result": false, "item": "10.255.255.2", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/6/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/6/10 ms"]]}
+2019-02-28 21:31:24,193 p=30851 u=ignw |  TASK [debug] **********************************************************************
+2019-02-28 21:31:24,220 p=30851 u=ignw |  fatal: [acme-sea-asa1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'stdout_lines'\n\nThe error appears to be in '/home/ignw/my_network_as_code/validate_configurations.yaml': line 40, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n      with_items: \"{{ test_ips }}\"\n    - debug:\n      ^ here\n"}
+2019-02-28 21:31:24,222 p=30851 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:31:24,222 p=30851 u=ignw |  PLAY RECAP ************************************************************************
+2019-02-28 21:31:24,223 p=30851 u=ignw |  acme-sea-asa1              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:31:24,223 p=30851 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:31:54,130 p=30896 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:31:54,231 p=30901 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:31:54,233 p=30901 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:31:54,235 p=30896 u=ignw |  shutdown complete
+2019-02-28 21:33:40,511 p=31382 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:33:41,078 p=31382 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:33:41,092 p=31382 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:33:41,872 p=31395 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0x2202a050L
+2019-02-28 21:33:41,873 p=31395 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:33:42,101 p=31395 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:33:42,101 p=31395 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:33:42,104 p=31395 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:33:42,104 p=31395 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:33:42,104 p=31395 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:33:42,104 p=31395 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:33:42,104 p=31395 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:33:42,157 p=31395 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:33:42,157 p=31395 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:33:42,266 p=31395 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:33:42,288 p=31395 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:33:42,288 p=31395 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:33:42,289 p=31395 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:33:42,291 p=31395 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:33:42,291 p=31395 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:33:42,336 p=31395 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:33:42,336 p=31395 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:33:42,357 p=31395 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:33:42,360 p=31395 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:33:43,129 p=31382 u=ignw |  network_os is set to nxos
+2019-02-28 21:33:47,641 p=31382 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:33:47,641 p=31382 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 5.534, "max": 5.901, "min": 5.209}}
+2019-02-28 21:33:47,643 p=31395 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:33:47,662 p=31395 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:33:47,684 p=31382 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] *********************************************************************************************************************************************
+2019-02-28 21:33:47,693 p=31382 u=ignw |  TASK [asa_command] *****************************************************************************************************************************************************************************************
+2019-02-28 21:33:47,778 p=31390 u=ignw |  shutdown complete
+2019-02-28 21:33:48,473 p=31432 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0x1127ae10L
+2019-02-28 21:33:48,473 p=31432 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:33:48,475 p=31432 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:33:48,475 p=31432 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:33:48,476 p=31432 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:33:48,476 p=31432 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:33:48,477 p=31432 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:33:48,477 p=31432 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:33:48,477 p=31432 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:33:48,520 p=31432 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:33:48,521 p=31432 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:33:48,538 p=31432 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:33:48,559 p=31432 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:33:48,569 p=31432 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:33:48,570 p=31432 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:33:48,571 p=31432 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:33:48,574 p=31432 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:33:48,575 p=31432 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:33:48,979 p=31382 u=ignw |  network_os is set to asa
+2019-02-28 21:33:49,820 p=31382 u=ignw |  ok: [acme-sea-asa1] => (item=8.8.4.4) => {"changed": false, "failed_when_result": false, "item": "8.8.4.4", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms"]]}
+2019-02-28 21:33:51,115 p=31382 u=ignw |  ok: [acme-sea-asa1] => (item=10.255.255.2) => {"changed": false, "failed_when_result": false, "item": "10.255.255.2", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/4/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/4/10 ms"]]}
+2019-02-28 21:33:51,122 p=31382 u=ignw |  TASK [debug] ***********************************************************************************************************************************************************************************************
+2019-02-28 21:33:51,149 p=31382 u=ignw |  fatal: [acme-sea-asa1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'stdout_lines'\n\nThe error appears to be in '/home/ignw/my_network_as_code/validate_configurations.yaml': line 40, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n      with_items: \"{{ test_ips }}\"\n    - debug:\n      ^ here\n"}
+2019-02-28 21:33:51,152 p=31382 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:33:51,152 p=31382 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:33:51,153 p=31382 u=ignw |  acme-sea-asa1              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:33:51,153 p=31382 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:34:21,067 p=31427 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:34:21,168 p=31432 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:34:21,171 p=31432 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:34:21,173 p=31427 u=ignw |  shutdown complete
+2019-02-28 21:34:46,946 p=31490 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:34:47,497 p=31490 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:34:47,511 p=31490 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:34:48,233 p=31503 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0xa0b98050L
+2019-02-28 21:34:48,234 p=31503 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:34:48,453 p=31503 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:34:48,453 p=31503 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:34:48,456 p=31503 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:34:48,456 p=31503 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:34:48,457 p=31503 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:34:48,457 p=31503 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:34:48,457 p=31503 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:34:48,511 p=31503 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:34:48,512 p=31503 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:34:48,618 p=31503 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:34:48,638 p=31503 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:34:48,639 p=31503 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:34:48,643 p=31503 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:34:48,645 p=31503 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:34:48,645 p=31503 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:34:48,692 p=31503 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:34:48,692 p=31503 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:34:48,710 p=31503 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:34:48,715 p=31503 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:34:49,476 p=31490 u=ignw |  network_os is set to nxos
+2019-02-28 21:34:53,983 p=31490 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:34:53,984 p=31490 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 5.538, "max": 6.011, "min": 5.059}}
+2019-02-28 21:34:53,987 p=31503 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:34:54,008 p=31503 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:34:54,026 p=31490 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] *********************************************************************************************************************************************
+2019-02-28 21:34:54,036 p=31490 u=ignw |  TASK [asa_command] *****************************************************************************************************************************************************************************************
+2019-02-28 21:34:54,120 p=31498 u=ignw |  shutdown complete
+2019-02-28 21:34:54,796 p=31540 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0x7f232e10L
+2019-02-28 21:34:54,796 p=31540 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:34:54,797 p=31540 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:34:54,797 p=31540 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:34:54,798 p=31540 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:34:54,798 p=31540 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:34:54,798 p=31540 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:34:54,798 p=31540 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:34:54,798 p=31540 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:34:54,835 p=31540 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:34:54,836 p=31540 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:34:54,845 p=31540 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:34:54,862 p=31540 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:34:54,875 p=31540 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:34:54,877 p=31540 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:34:54,877 p=31540 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:34:54,880 p=31540 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:34:54,882 p=31540 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:34:55,280 p=31490 u=ignw |  network_os is set to asa
+2019-02-28 21:34:56,096 p=31490 u=ignw |  ok: [acme-sea-asa1] => (item=8.8.4.4) => {"changed": false, "failed_when_result": false, "item": "8.8.4.4", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"]]}
+2019-02-28 21:34:57,326 p=31490 u=ignw |  ok: [acme-sea-asa1] => (item=10.255.255.2) => {"changed": false, "failed_when_result": false, "item": "10.255.255.2", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/6/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/6/10 ms"]]}
+2019-02-28 21:34:57,335 p=31490 u=ignw |  PLAY [Validate "Edge" Reachability from Edge Router] *******************************************************************************************************************************************************
+2019-02-28 21:34:57,344 p=31490 u=ignw |  TASK [Test Success Pings] **********************************************************************************************************************************************************************************
+2019-02-28 21:34:58,106 p=31600 u=ignw | paramiko [10.0.0.5] starting thread (client mode): 0x4dc920d0L
+2019-02-28 21:34:58,107 p=31600 u=ignw | paramiko [10.0.0.5] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:34:58,107 p=31600 u=ignw | paramiko [10.0.0.5] Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 21:34:58,107 p=31600 u=ignw | paramiko [10.0.0.5] Connected (version 2.0, client Cisco-1.25)
+2019-02-28 21:34:58,108 p=31600 u=ignw | paramiko [10.0.0.5] kex algos:[u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:34:58,108 p=31600 u=ignw | paramiko [10.0.0.5] Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 21:34:58,108 p=31600 u=ignw | paramiko [10.0.0.5] Cipher agreed: aes128-ctr
+2019-02-28 21:34:58,108 p=31600 u=ignw | paramiko [10.0.0.5] MAC agreed: hmac-sha2-256
+2019-02-28 21:34:58,109 p=31600 u=ignw | paramiko [10.0.0.5] Compression agreed: none
+2019-02-28 21:34:58,310 p=31600 u=ignw | paramiko [10.0.0.5] Got server p (2048 bits)
+2019-02-28 21:34:58,485 p=31600 u=ignw | paramiko [10.0.0.5] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:34:58,486 p=31600 u=ignw | paramiko [10.0.0.5] Switch to new keys ...
+2019-02-28 21:34:58,688 p=31600 u=ignw | paramiko [10.0.0.5] userauth is OK
+2019-02-28 21:34:58,690 p=31600 u=ignw | paramiko [10.0.0.5] Authentication (password) successful!
+2019-02-28 21:34:58,709 p=31600 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:34:58,711 p=31600 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:34:58,711 p=31600 u=ignw | paramiko [10.0.0.5] Secsh channel 0 opened.
+2019-02-28 21:34:58,714 p=31600 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:34:58,716 p=31600 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:34:59,180 p=31490 u=ignw |  network_os is set to ios
+2019-02-28 21:35:00,120 p=31490 u=ignw |  ok: [ignw-csr] => (item=203.0.113.2) => {"changed": false, "commands": ["ping 203.0.113.2"], "item": "203.0.113.2", "packet_loss": "0%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 1, "max": 1, "min": 1}}
+2019-02-28 21:35:00,129 p=31490 u=ignw |  TASK [Test Fail Pings] *************************************************************************************************************************************************************************************
+2019-02-28 21:35:01,459 p=31490 u=ignw |  failed: [ignw-csr] (item=10.255.255.2) => {"changed": false, "commands": ["ping 10.255.255.2 repeat 4"], "item": "10.255.255.2", "msg": "Ping succeeded unexpectedly", "packet_loss": "0%", "packets_rx": 4, "packets_tx": 4, "rtt": {"avg": 5, "max": 5, "min": 5}}
+2019-02-28 21:35:01,461 p=31490 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:35:01,462 p=31490 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:35:01,462 p=31490 u=ignw |  acme-sea-asa1              : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:35:01,462 p=31490 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:35:01,463 p=31490 u=ignw |  ignw-csr                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:35:27,276 p=31535 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:35:27,377 p=31540 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:35:27,380 p=31540 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:35:27,381 p=31535 u=ignw |  shutdown complete
+2019-02-28 21:35:31,409 p=31595 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:35:31,511 p=31600 u=ignw | paramiko [10.0.0.5] [chan 0] EOF sent (0)
+2019-02-28 21:35:31,574 p=31600 u=ignw | paramiko [10.0.0.5] EOF in transport thread
+2019-02-28 21:35:31,576 p=31595 u=ignw |  shutdown complete
+2019-02-28 21:35:45,027 p=31659 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:35:45,571 p=31659 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:35:45,584 p=31659 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:35:46,313 p=31672 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0xd5dfe050L
+2019-02-28 21:35:46,314 p=31672 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:35:46,547 p=31672 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:35:46,548 p=31672 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:35:46,551 p=31672 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:35:46,552 p=31672 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:35:46,552 p=31672 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:35:46,552 p=31672 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:35:46,552 p=31672 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:35:46,602 p=31672 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:35:46,603 p=31672 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:35:46,711 p=31672 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:35:46,732 p=31672 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:35:46,732 p=31672 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:35:46,748 p=31672 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:35:46,751 p=31672 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:35:46,751 p=31672 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:35:46,792 p=31672 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:35:46,792 p=31672 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:35:46,815 p=31672 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:35:46,819 p=31672 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:35:47,580 p=31659 u=ignw |  network_os is set to nxos
+2019-02-28 21:35:51,978 p=31659 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:35:51,979 p=31659 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 6.84, "max": 7.204, "min": 6.444}}
+2019-02-28 21:35:51,981 p=31672 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:35:52,005 p=31672 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:35:52,022 p=31659 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] *********************************************************************************************************************************************
+2019-02-28 21:35:52,035 p=31659 u=ignw |  TASK [asa_command] *****************************************************************************************************************************************************************************************
+2019-02-28 21:35:52,115 p=31667 u=ignw |  shutdown complete
+2019-02-28 21:35:52,769 p=31709 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0x3260e10L
+2019-02-28 21:35:52,770 p=31709 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:35:52,770 p=31709 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:35:52,770 p=31709 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:35:52,771 p=31709 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:35:52,771 p=31709 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:35:52,771 p=31709 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:35:52,772 p=31709 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:35:52,772 p=31709 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:35:52,811 p=31709 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:35:52,812 p=31709 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:35:52,820 p=31709 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:35:52,836 p=31709 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:35:52,851 p=31709 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:35:52,853 p=31709 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:35:52,853 p=31709 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:35:52,856 p=31709 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:35:52,857 p=31709 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:35:53,255 p=31659 u=ignw |  network_os is set to asa
+2019-02-28 21:35:54,076 p=31659 u=ignw |  ok: [acme-sea-asa1] => (item=8.8.4.4) => {"changed": false, "failed_when_result": false, "item": "8.8.4.4", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"]]}
+2019-02-28 21:35:55,184 p=31659 u=ignw |  ok: [acme-sea-asa1] => (item=10.255.255.2) => {"changed": false, "failed_when_result": false, "item": "10.255.255.2", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/4/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/4/10 ms"]]}
+2019-02-28 21:35:55,194 p=31659 u=ignw |  PLAY [Validate "Edge" Reachability from Edge Router] *******************************************************************************************************************************************************
+2019-02-28 21:35:55,203 p=31659 u=ignw |  TASK [Test Success Pings] **********************************************************************************************************************************************************************************
+2019-02-28 21:35:55,971 p=31769 u=ignw | paramiko [10.0.0.5] starting thread (client mode): 0xd5f270d0L
+2019-02-28 21:35:55,972 p=31769 u=ignw | paramiko [10.0.0.5] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:35:55,972 p=31769 u=ignw | paramiko [10.0.0.5] Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 21:35:55,972 p=31769 u=ignw | paramiko [10.0.0.5] Connected (version 2.0, client Cisco-1.25)
+2019-02-28 21:35:55,974 p=31769 u=ignw | paramiko [10.0.0.5] kex algos:[u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:35:55,974 p=31769 u=ignw | paramiko [10.0.0.5] Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 21:35:55,974 p=31769 u=ignw | paramiko [10.0.0.5] Cipher agreed: aes128-ctr
+2019-02-28 21:35:55,974 p=31769 u=ignw | paramiko [10.0.0.5] MAC agreed: hmac-sha2-256
+2019-02-28 21:35:55,974 p=31769 u=ignw | paramiko [10.0.0.5] Compression agreed: none
+2019-02-28 21:35:56,176 p=31769 u=ignw | paramiko [10.0.0.5] Got server p (2048 bits)
+2019-02-28 21:35:56,293 p=31769 u=ignw | paramiko [10.0.0.5] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:35:56,294 p=31769 u=ignw | paramiko [10.0.0.5] Switch to new keys ...
+2019-02-28 21:35:56,496 p=31769 u=ignw | paramiko [10.0.0.5] userauth is OK
+2019-02-28 21:35:56,498 p=31769 u=ignw | paramiko [10.0.0.5] Authentication (password) successful!
+2019-02-28 21:35:56,499 p=31769 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:35:56,501 p=31769 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:35:56,501 p=31769 u=ignw | paramiko [10.0.0.5] Secsh channel 0 opened.
+2019-02-28 21:35:56,504 p=31769 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:35:56,506 p=31769 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:35:57,028 p=31659 u=ignw |  network_os is set to ios
+2019-02-28 21:35:57,987 p=31659 u=ignw |  ok: [ignw-csr] => (item=203.0.113.2) => {"changed": false, "commands": ["ping 203.0.113.2"], "item": "203.0.113.2", "packet_loss": "0%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 1, "max": 1, "min": 1}}
+2019-02-28 21:35:57,996 p=31659 u=ignw |  TASK [Test Fail Pings] *************************************************************************************************************************************************************************************
+2019-02-28 21:35:59,369 p=31659 u=ignw |  failed: [ignw-csr] (item=8.8.8.8) => {"changed": false, "commands": ["ping 8.8.8.8 repeat 4"], "item": "8.8.8.8", "msg": "Ping succeeded unexpectedly", "packet_loss": "0%", "packets_rx": 4, "packets_tx": 4, "rtt": {"avg": 1, "max": 1, "min": 1}}
+2019-02-28 21:35:59,373 p=31659 u=ignw |  	to retry, use: --limit @/home/ignw/my_network_as_code/validate_configurations.retry
+
+2019-02-28 21:35:59,373 p=31659 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:35:59,373 p=31659 u=ignw |  acme-sea-asa1              : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:35:59,373 p=31659 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:35:59,374 p=31659 u=ignw |  ignw-csr                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:36:24,364 p=31824 u=ignw |  Using /home/ignw/my_network_as_code/ansible.cfg as config file
+2019-02-28 21:36:24,895 p=31824 u=ignw |  PLAY [Validate "Core" to "Internet" Reachability] **********************************************************************************************************************************************************
+2019-02-28 21:36:24,907 p=31824 u=ignw |  TASK [nxos_ping] *******************************************************************************************************************************************************************************************
+2019-02-28 21:36:25,134 p=31704 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:36:25,236 p=31709 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:36:25,238 p=31709 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:36:25,240 p=31704 u=ignw |  shutdown complete
+2019-02-28 21:36:25,625 p=31837 u=ignw | paramiko [10.0.0.6] starting thread (client mode): 0xdc599050L
+2019-02-28 21:36:25,626 p=31837 u=ignw | paramiko [10.0.0.6] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:36:25,861 p=31837 u=ignw | paramiko [10.0.0.6] Remote version/idstring: SSH-2.0-OpenSSH_7.2 FIPS
+2019-02-28 21:36:25,862 p=31837 u=ignw | paramiko [10.0.0.6] Connected (version 2.0, client OpenSSH_7.2)
+2019-02-28 21:36:25,865 p=31837 u=ignw | paramiko [10.0.0.6] kex algos:[u'diffie-hellman-group14-sha1', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1'] server mac:[u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:36:25,865 p=31837 u=ignw | paramiko [10.0.0.6] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:36:25,865 p=31837 u=ignw | paramiko [10.0.0.6] Cipher agreed: aes128-ctr
+2019-02-28 21:36:25,865 p=31837 u=ignw | paramiko [10.0.0.6] MAC agreed: hmac-sha1
+2019-02-28 21:36:25,865 p=31837 u=ignw | paramiko [10.0.0.6] Compression agreed: none
+2019-02-28 21:36:25,916 p=31837 u=ignw | paramiko [10.0.0.6] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:36:25,917 p=31837 u=ignw | paramiko [10.0.0.6] Switch to new keys ...
+2019-02-28 21:36:26,024 p=31837 u=ignw | paramiko [10.0.0.6] userauth is OK
+2019-02-28 21:36:26,046 p=31837 u=ignw | paramiko [10.0.0.6] Auth banner: User Access Verification
+
+2019-02-28 21:36:26,046 p=31837 u=ignw | paramiko [10.0.0.6] Authentication (password) successful!
+2019-02-28 21:36:26,059 p=31837 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:36:26,061 p=31837 u=ignw | paramiko [10.0.0.6] Received global request "hostkeys-00@openssh.com"
+2019-02-28 21:36:26,061 p=31837 u=ignw | paramiko [10.0.0.6] Rejecting "hostkeys-00@openssh.com" global request from server.
+2019-02-28 21:36:26,104 p=31837 u=ignw | paramiko [10.0.0.6] [chan 0] Max packet out: 32768 bytes
+2019-02-28 21:36:26,104 p=31837 u=ignw | paramiko [10.0.0.6] Secsh channel 0 opened.
+2019-02-28 21:36:26,126 p=31837 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:36:26,131 p=31837 u=ignw | paramiko [10.0.0.6] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:36:26,898 p=31824 u=ignw |  network_os is set to nxos
+2019-02-28 21:36:29,317 p=31764 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:36:29,419 p=31769 u=ignw | paramiko [10.0.0.5] [chan 0] EOF sent (0)
+2019-02-28 21:36:29,482 p=31769 u=ignw | paramiko [10.0.0.5] EOF in transport thread
+2019-02-28 21:36:29,484 p=31764 u=ignw |  shutdown complete
+2019-02-28 21:36:31,411 p=31824 u=ignw |   [WARNING]: The value 5 (type int) in a string field was converted to '5' (type string). If this does not look like what you expect, quote the entire value to ensure it does not change.
+
+2019-02-28 21:36:31,412 p=31824 u=ignw |  ok: [acme-sea-nxos1] => {"changed": false, "commands": ["ping 8.8.4.4 count 5"], "packet_loss": "0.00%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 5.962, "max": 6.288, "min": 5.508}}
+2019-02-28 21:36:31,414 p=31837 u=ignw | paramiko [10.0.0.6] [chan 0] EOF sent (0)
+2019-02-28 21:36:31,445 p=31837 u=ignw | paramiko [10.0.0.6] EOF in transport thread
+2019-02-28 21:36:31,454 p=31824 u=ignw |  PLAY [Validate "Core" & "Internet" Reachability from Firewall] *********************************************************************************************************************************************
+2019-02-28 21:36:31,464 p=31824 u=ignw |  TASK [asa_command] *****************************************************************************************************************************************************************************************
+2019-02-28 21:36:31,548 p=31832 u=ignw |  shutdown complete
+2019-02-28 21:36:32,211 p=31874 u=ignw | paramiko [10.0.0.8] starting thread (client mode): 0x3ab03e10L
+2019-02-28 21:36:32,212 p=31874 u=ignw | paramiko [10.0.0.8] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:36:32,213 p=31874 u=ignw | paramiko [10.0.0.8] Remote version/idstring: SSH-1.99-Cisco-1.25
+2019-02-28 21:36:32,213 p=31874 u=ignw | paramiko [10.0.0.8] Connected (version 1.99, client Cisco-1.25)
+2019-02-28 21:36:32,214 p=31874 u=ignw | paramiko [10.0.0.8] kex algos:[u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-cbc', u'aes192-cbc', u'aes256-cbc', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:36:32,214 p=31874 u=ignw | paramiko [10.0.0.8] Kex agreed: diffie-hellman-group14-sha1
+2019-02-28 21:36:32,214 p=31874 u=ignw | paramiko [10.0.0.8] Cipher agreed: aes128-ctr
+2019-02-28 21:36:32,215 p=31874 u=ignw | paramiko [10.0.0.8] MAC agreed: hmac-sha1
+2019-02-28 21:36:32,215 p=31874 u=ignw | paramiko [10.0.0.8] Compression agreed: none
+2019-02-28 21:36:32,258 p=31874 u=ignw | paramiko [10.0.0.8] kex engine KexGroup14 specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:36:32,259 p=31874 u=ignw | paramiko [10.0.0.8] Switch to new keys ...
+2019-02-28 21:36:32,275 p=31874 u=ignw | paramiko [10.0.0.8] userauth is OK
+2019-02-28 21:36:32,290 p=31874 u=ignw | paramiko [10.0.0.8] Authentication (password) successful!
+2019-02-28 21:36:32,305 p=31874 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:36:32,307 p=31874 u=ignw | paramiko [10.0.0.8] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:36:32,307 p=31874 u=ignw | paramiko [10.0.0.8] Secsh channel 0 opened.
+2019-02-28 21:36:32,310 p=31874 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:36:32,312 p=31874 u=ignw | paramiko [10.0.0.8] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:36:32,706 p=31824 u=ignw |  network_os is set to asa
+2019-02-28 21:36:33,482 p=31824 u=ignw |  ok: [acme-sea-asa1] => (item=8.8.4.4) => {"changed": false, "failed_when_result": false, "item": "8.8.4.4", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 8.8.4.4, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/10 ms"]]}
+2019-02-28 21:36:34,683 p=31824 u=ignw |  ok: [acme-sea-asa1] => (item=10.255.255.2) => {"changed": false, "failed_when_result": false, "item": "10.255.255.2", "stdout": ["Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:\n!!!!!\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/6/10 ms"], "stdout_lines": [["Type escape sequence to abort.", "Sending 5, 100-byte ICMP Echos to 10.255.255.2, timeout is 2 seconds:", "!!!!!", "Success rate is 100 percent (5/5), round-trip min/avg/max = 1/6/10 ms"]]}
+2019-02-28 21:36:34,691 p=31824 u=ignw |  PLAY [Validate "Edge" Reachability from Edge Router] *******************************************************************************************************************************************************
+2019-02-28 21:36:34,700 p=31824 u=ignw |  TASK [Test Success Pings] **********************************************************************************************************************************************************************************
+2019-02-28 21:36:35,468 p=31934 u=ignw | paramiko [10.0.0.5] starting thread (client mode): 0xb5d7f0d0L
+2019-02-28 21:36:35,469 p=31934 u=ignw | paramiko [10.0.0.5] Local version/idstring: SSH-2.0-paramiko_2.0.0
+2019-02-28 21:36:35,469 p=31934 u=ignw | paramiko [10.0.0.5] Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-28 21:36:35,469 p=31934 u=ignw | paramiko [10.0.0.5] Connected (version 2.0, client Cisco-1.25)
+2019-02-28 21:36:35,470 p=31934 u=ignw | paramiko [10.0.0.5] kex algos:[u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] server mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1', u'hmac-sha1-96'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+2019-02-28 21:36:35,470 p=31934 u=ignw | paramiko [10.0.0.5] Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-28 21:36:35,470 p=31934 u=ignw | paramiko [10.0.0.5] Cipher agreed: aes128-ctr
+2019-02-28 21:36:35,470 p=31934 u=ignw | paramiko [10.0.0.5] MAC agreed: hmac-sha2-256
+2019-02-28 21:36:35,470 p=31934 u=ignw | paramiko [10.0.0.5] Compression agreed: none
+2019-02-28 21:36:35,672 p=31934 u=ignw | paramiko [10.0.0.5] Got server p (2048 bits)
+2019-02-28 21:36:35,796 p=31934 u=ignw | paramiko [10.0.0.5] kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-28 21:36:35,797 p=31934 u=ignw | paramiko [10.0.0.5] Switch to new keys ...
+2019-02-28 21:36:35,998 p=31934 u=ignw | paramiko [10.0.0.5] userauth is OK
+2019-02-28 21:36:36,000 p=31934 u=ignw | paramiko [10.0.0.5] Authentication (password) successful!
+2019-02-28 21:36:36,003 p=31934 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet in: 32768 bytes
+2019-02-28 21:36:36,004 p=31934 u=ignw | paramiko [10.0.0.5] [chan 0] Max packet out: 4096 bytes
+2019-02-28 21:36:36,004 p=31934 u=ignw | paramiko [10.0.0.5] Secsh channel 0 opened.
+2019-02-28 21:36:36,005 p=31934 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:36:36,007 p=31934 u=ignw | paramiko [10.0.0.5] [chan 0] Sesch channel 0 request ok
+2019-02-28 21:36:36,462 p=31824 u=ignw |  network_os is set to ios
+2019-02-28 21:36:37,409 p=31824 u=ignw |  ok: [ignw-csr] => (item=203.0.113.2) => {"changed": false, "commands": ["ping 203.0.113.2"], "item": "203.0.113.2", "packet_loss": "0%", "packets_rx": 5, "packets_tx": 5, "rtt": {"avg": 1, "max": 1, "min": 1}}
+2019-02-28 21:36:37,417 p=31824 u=ignw |  TASK [Test Fail Pings] *************************************************************************************************************************************************************************************
+2019-02-28 21:36:46,830 p=31824 u=ignw |  ok: [ignw-csr] => (item=8.8.8.81) => {"changed": false, "commands": ["ping 8.8.8.81 repeat 4"], "item": "8.8.8.81", "packet_loss": "100%", "packets_rx": 0, "packets_tx": 4, "rtt": {"avg": null, "max": null, "min": null}}
+2019-02-28 21:36:46,835 p=31824 u=ignw |  PLAY RECAP *************************************************************************************************************************************************************************************************
+2019-02-28 21:36:46,835 p=31824 u=ignw |  acme-sea-asa1              : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:36:46,836 p=31824 u=ignw |  acme-sea-nxos1             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:36:46,836 p=31824 u=ignw |  ignw-csr                   : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-02-28 21:37:04,629 p=31869 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:37:04,730 p=31874 u=ignw | paramiko [10.0.0.8] [chan 0] EOF sent (0)
+2019-02-28 21:37:04,732 p=31874 u=ignw | paramiko [10.0.0.8] EOF in transport thread
+2019-02-28 21:37:04,735 p=31869 u=ignw |  shutdown complete
+2019-02-28 21:37:16,769 p=31929 u=ignw |  persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2019-02-28 21:37:16,871 p=31934 u=ignw | paramiko [10.0.0.5] [chan 0] EOF sent (0)
+2019-02-28 21:37:16,931 p=31934 u=ignw | paramiko [10.0.0.5] EOF in transport thread
+2019-02-28 21:37:16,935 p=31929 u=ignw |  shutdown complete

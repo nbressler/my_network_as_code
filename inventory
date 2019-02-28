@@ -4,10 +4,10 @@ acme-sea-asa1
 acme-sea-nxos1
 
 [cisco-ios-xe-routers]
-ignw-csr
+ignw-csr ansible_host=10.0.0.5
 
 [cisco-asa]
 acme-sea-asa1
 
 [cisco-nxos]
-acme-sea-nxos1
+acme-sea-nxos1 ansible_host=10.0.0.6

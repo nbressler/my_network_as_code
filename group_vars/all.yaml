@@ -1,2 +1,4 @@
+username: ignw
+password: ignw
 ansible_python_interpreter: /usr/bin/python3
 logging_buff_size: 8192
